@@ -1,12 +1,15 @@
+import Link from "next/link"
 
 interface Props{
     text:string
     colorText: string
-    onClick?: () => void
+    link: string
 }
 
-export default function LinkText({colorText, text, onClick}:Props){
+export default function LinkText({colorText, text, link}:Props){
     return(
-        <div onClick={onClick} className={`relativ ${colorText} text-center cursor-pointer hover:text-[#FF1577] transition duration-300`}>{text}</div>
+        <Link href={`${link}`} className={`relativ ${colorText} text-center cursor-pointer hover:text-[#FF1577]`}>
+            {text}
+        </Link>
     )
 }
