@@ -18,8 +18,8 @@ export default function BannerImgDuplo({img1, img2, title1, text1,  colorText1, 
 
   
   return (
-    <div className={`flex w-full flex-row h-[calc(35rem)] p-4 rounded-lg mt-2 mb-4`}>
-      <div className="w-2/4 flex items-center flex-col">
+    <div className={`flex w-full flex-col h-[calc(35rem)] p-4 rounded-lg relative mt-2 mb-4 sm:flex-row sm: items-center`}>
+      <div className="w-full flex items-center flex-col sm:w-2/4">
         <div className="w-2/4 flex items-center justify-center">
             <Image
             src={imgSrc1}
@@ -35,7 +35,7 @@ export default function BannerImgDuplo({img1, img2, title1, text1,  colorText1, 
             <p className="text-[#8A8A8A] text-justify">{text1}</p>
         </div>
       </div>
-      <div className="w-2/4 flex items-center flex-col">
+      <div className="w-full flex items-center flex-col sm:w-2/4">
         <div className="w-2/4 flex items-center justify-center">
             <Image
             src={imgSrc2}

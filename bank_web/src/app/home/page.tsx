@@ -1,7 +1,7 @@
 import BannerImgDuplo from "@/components/BannerDuplo";
 import BannerImg from "@/components/BannerImg";
-import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import Logo from "@/components/Logo";
 
 export default function Home(){
     return(
@@ -40,7 +40,6 @@ export default function Home(){
                 text2="A segurança no Bank é nossa prioridade. Utilizamos medidas rigorosas para proteger suas informações e transações financeiras. Conte com nossa confiabilidade e compromisso com a proteção de seus ativos e dados pessoais. Sinta-se tranquilo ao escolher o Bank para suas necessidades financeiras."
                 colorText2="text-[#FFBD15]"
             />
-            <Footer img1="googleStore" img2="googleStore"/>
         </div>
     )
 }

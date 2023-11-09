@@ -11,27 +11,30 @@ interface Props {
   colorText: string
 }
 
-export default function BannerImg({img, title, text, reverse, horizontalLayout, backGround, colorText}: Props) {
+export default function BannerImg({ img, title, text, reverse, horizontalLayout, backGround, colorText }: Props) {
   const imgSrc = imgs[img];
 
   const flexRowClass = reverse ? "flex-row-reverse" : "flex-row";
-  const flexColClass = horizontalLayout ? "flex-col items-center" : "";
-  const backGorundWhite = backGround ? "bg-white" : ""
+  const backGorundWhite = backGround ? "bg-white" : "";
+
   return (
-    <div className={`flex w-full ${flexRowClass} ${flexColClass} ${backGorundWhite} h-[calc(35rem)] p-4 rounded-lg mt-2 mb-4`}>
-      <div className="w-2/4 flex items-center justify-center">
+    <div 
+      className={`flex w-full flex-col ${backGorundWhite} items-center p-4 rounded-lg mt-2 mb-4 sm:${flexRowClass} `}
+    >
+      <div className="w-full sm:w-2/4 flex items-center justify-center">
         <Image
           src={imgSrc}
-          alt="Baner"
+          alt="Banner"
           width={341}
           height={513}
           objectFit="cover"
           layout="fixed"
         />
       </div>
-      <div className="w-2/4 flex text-center justify-center flex-col gap-10 items-center p-4">
-        <h1 className={`${colorText} text-2xl `}>{title}</h1>
-        <p className="text-[#8A8A8A] text-lg text-justify">{text}</p>
+  
+      <div className="w-full sm:w-2/4 flex text-center justify-center flex-col gap-10 items-center p-4">
+        <h1 className={`text-2xl sm:text-xl ${colorText}`}>{title}</h1>
+        <p className="text-[#8A8A8A] text-lg text-justify sm:text-sm">{text}</p>
       </div>
     </div>
   );
